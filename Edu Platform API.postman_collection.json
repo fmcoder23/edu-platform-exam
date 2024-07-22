@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "8f5bf8f7-053c-435b-8ef7-2dc9832f4f92",
+		"name": "Edu Platform API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34603333"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"Fozil Mamadaliev\",\n    \"phone\": \"938431029\",\n    \"password\": \"4444\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"938431029\",\n    \"password\": \"4444\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"998\",\n    \"password\": \"4444\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZmZlY2M3LTVjYWYtNDk5OS05MTdlLTJlNGVmZmI2YTdiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTY2MTQ5MCwiZXhwIjoxNzIxNjc1ODkwfQ.nO-kfN_m9lEF1DjblORY03GSKt6wqQcsqR03q1jKnIg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZmZlY2M3LTVjYWYtNDk5OS05MTdlLTJlNGVmZmI2YTdiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTY2MTQ5MCwiZXhwIjoxNzIxNjc1ODkwfQ.nO-kfN_m9lEF1DjblORY03GSKt6wqQcsqR03q1jKnIg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Delete me",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "React",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/Users/pc/Desktop/Najot talim/testimages/cylinder.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZmZlY2M3LTVjYWYtNDk5OS05MTdlLTJlNGVmZmI2YTdiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTY2MTQ5MCwiZXhwIjoxNzIxNjc1ODkwfQ.nO-kfN_m9lEF1DjblORY03GSKt6wqQcsqR03q1jKnIg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Backend",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "NodeJS",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/Users/pc/Desktop/Najot talim/testimages/cube.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/courses/4d1d99e8-bfd0-4045-acd3-6d15de046a95",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses",
+								"4d1d99e8-bfd0-4045-acd3-6d15de046a95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZmZlY2M3LTVjYWYtNDk5OS05MTdlLTJlNGVmZmI2YTdiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTY2MTQ5MCwiZXhwIjoxNzIxNjc1ODkwfQ.nO-kfN_m9lEF1DjblORY03GSKt6wqQcsqR03q1jKnIg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/courses/7275dc9a-1d23-4def-9518-d0394d726d89",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses",
+								"7275dc9a-1d23-4def-9518-d0394d726d89"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enroll",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmYWY1ZGEyLWQyYmQtNDcyNy1iNzk4LWY3YTUwZmU1NDRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MjE2NTk5MjYsImV4cCI6MTcyMTY3NDMyNn0.UadSnRgtp2a5YQqvPq_huapWhTjZBhe15DsVE-ZQLkQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/courses/enroll/4d1d99e8-bfd0-4045-acd3-6d15de046a95",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses",
+								"enroll",
+								"4d1d99e8-bfd0-4045-acd3-6d15de046a95"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enrolled Courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFmYWY1ZGEyLWQyYmQtNDcyNy1iNzk4LWY3YTUwZmU1NDRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MjE2NTk5MjYsImV4cCI6MTcyMTY3NDMyNn0.UadSnRgtp2a5YQqvPq_huapWhTjZBhe15DsVE-ZQLkQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/courses/enrollments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"courses",
+								"enrollments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lessons",
+			"item": [
+				{
+					"name": "Get Lessons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Lesson",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZmZlY2M3LTVjYWYtNDk5OS05MTdlLTJlNGVmZmI2YTdiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTY2MTQ5MCwiZXhwIjoxNzIxNjc1ODkwfQ.nO-kfN_m9lEF1DjblORY03GSKt6wqQcsqR03q1jKnIg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "delete me",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/Users/pc/Desktop/Uzum /0216.mp4"
+								},
+								{
+									"key": "courseId",
+									"value": "b5b1c337-c8a6-4bf6-8d0f-e939452ef806",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/lessons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Lesson",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZmZlY2M3LTVjYWYtNDk5OS05MTdlLTJlNGVmZmI2YTdiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTY2MTQ5MCwiZXhwIjoxNzIxNjc1ODkwfQ.nO-kfN_m9lEF1DjblORY03GSKt6wqQcsqR03q1jKnIg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "2-dars",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/Users/pc/Desktop/Uzum /0216.mp4"
+								},
+								{
+									"key": "courseId",
+									"value": "b5b1c337-c8a6-4bf6-8d0f-e939452ef806",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/lessons/55bd6be3-bc1f-4344-b1e1-209acd1eb281",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons",
+								"55bd6be3-bc1f-4344-b1e1-209acd1eb281"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Lesson",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZmZlY2M3LTVjYWYtNDk5OS05MTdlLTJlNGVmZmI2YTdiOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMTY2MTQ5MCwiZXhwIjoxNzIxNjc1ODkwfQ.nO-kfN_m9lEF1DjblORY03GSKt6wqQcsqR03q1jKnIg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/lessons/8e4d1174-c581-44be-8a74-f7d1e694d17c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"lessons",
+								"8e4d1174-c581-44be-8a74-f7d1e694d17c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
